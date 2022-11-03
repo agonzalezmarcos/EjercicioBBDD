@@ -67,9 +67,13 @@ public class MainOperativa {
 			ResultSet rs = sent.executeQuery(ssql);
 			while(rs.next()) {
 				System.out.println("Esto es lo que quieres modificar");
-				System.out.printf(
-						rs.getString(1)+rs.getString(2)+rs.getString(3)+rs.getString(4)+rs.getString(5));
-				System.out.println();
+				System.out.println("------------------------------------------------------");
+				System.out.println("IDN    APENOM      DIRECCION     PROV    EMAIL");
+				System.out.printf(		
+						rs.getString(1)+"       "+rs.getString(2)+"        "+rs.getString(3)+"        "+rs.getString(4)+"         "+rs.getString(5));
+				
+			System.out.println();
+			System.out.println();
 			}
 			rs.previous();
 			dni=rs.getString(1);
@@ -133,8 +137,13 @@ public class MainOperativa {
 			String ssql2="SELECT * FROM alumnos WHERE IDN='"+dni+"'";
 			ResultSet rs2 = sent2.executeQuery(ssql2		);
 			while(rs2.next()) {
-				System.out.printf(
-						rs.getString(1)+rs.getString(2)+rs.getString(3)+rs.getString(4)+rs.getString(5));
+				System.out.println("------------------------------------------------------");
+				System.out.println("IDN    APENOM      DIRECCION     PROV    EMAIL");
+				System.out.printf(		
+						rs.getString(1)+"       "+rs.getString(2)+"        "+rs.getString(3)+"        "+rs.getString(4)+"         "+rs.getString(5));
+				
+			System.out.println();
+			System.out.println();
 			}
 			rs.close();
 			rs2.close();
@@ -164,9 +173,14 @@ public class MainOperativa {
 			String ssql="SELECT * FROM alumnos WHERE IDN='"+dni+"'";
 				ResultSet rs = sent.executeQuery(ssql);
 				while(rs.next()) {
-					System.out.printf(
-							rs.getString(1)+rs.getString(2)+rs.getString(3)+rs.getString(4)+rs.getString(5));
-					}
+					System.out.println("------------------------------------------------------");
+					System.out.println("IDN    APENOM      DIRECCION     PROV    EMAIL");
+					System.out.printf(		
+							rs.getString(1)+"       "+rs.getString(2)+"        "+rs.getString(3)+"        "+rs.getString(4)+"         "+rs.getString(5));
+					
+				System.out.println();
+				System.out.println();
+				}
 					rs.close();
 					sent.close();
 					conn.close();
